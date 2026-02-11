@@ -1,33 +1,111 @@
-
-.sidebar ul {
-  list-style: none;
+/* ===== PALETA PATRIOTS ===== */
+:root {
+  --blue: #002244;
+  --red: #C60C30;
+  --silver: #B0B7BC;
+  --white: #FFFFFF;
 }
 
-.sidebar li {
-  margin-bottom: 12px;
-  color: #444;
-  font-size: 15px;
+/* ===== CONFIGURAÇÃO GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--white);
+  color: var(--blue);
 }
 
-footer {
-  background: #0a0a0a;
-  color: #bbb;
+/* ===== HEADER ===== */
+header {
+  background: var(--blue);
+  color: var(--white);
   text-align: center;
-  padding: 25px 0;
-  margin-top: 60px;
-  font-size: 14px;
+  padding: 20px;
 }
 
-@media (max-width: 900px) {
-  .main {
-    grid-template-columns: 1fr;
-  }
+header img {
+  width: 100px;
+}
 
+header h1 {
+  margin: 10px 0 0;
+}
+
+/* ===== MENU ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  background: var(--red);
+  padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--white);
+  margin: 0 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--silver);
+}
+
+/* ===== CONTEÚDO ===== */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+.card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid var(--silver);
+  border-radius: 8px;
+  background: #f7f7f7;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+  color: var(--red);
+  margin-top: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 5px 0;
+  font-weight: bold;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--blue);
+  color: var(--white);
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 600px) {
   nav {
-    display: none;
+    flex-direction: column;
   }
 
-  .hero h1 {
-    font-size: 32px;
+  nav a {
+    margin: 5px 0;
+  }
+
+  .card {
+    margin: 15px;
   }
 }
